@@ -1,11 +1,16 @@
 import React from 'react';
 
+// withRouter: Takes a component and modifies it in some way, sort of like a function.
+import { withRouter } from 'react-router-dom';
+
 import './menu-item.styles.scss';
 
 // Destructure values from props
-const MenuItem = ({ title, imageUrl, size }) => {
+const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => {
 	return (
-		<div className={`${size} menu-item`}>
+    <div 
+      className={`${size} menu-item`} 
+      onClick={() => history.push(`${match.url}${linkUrl}`)} >
       <div 
         style={{
           backgroundImage: `url(${imageUrl})`
@@ -20,4 +25,5 @@ const MenuItem = ({ title, imageUrl, size }) => {
 	);
 };
 
-export default MenuItem;
+// Returns MenuItem component with location, match, and history props.
+export default withRouter(MenuItem);
