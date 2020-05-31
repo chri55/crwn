@@ -25,5 +25,17 @@
 
   .quantity {
     padding-left: 20px;
+    user-select: none;
+
+    .remove-one,
+    .add-one {
+      display:inline;
+      margin: 0 10px;
+      user-select: none;
+    }
+
+    .remove-button {
+      user-select: none;
+    }
   }
 }
