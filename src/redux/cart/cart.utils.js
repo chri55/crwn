@@ -17,5 +17,7 @@ export const removeItemFromCart = (cartItems, itemToRemove) => {
     cartItem.id === itemToRemove.id
     ? {...cartItem, quantity: cartItem.quantity - 1}
     : cartItem  
-  )
+  ).filter(
+    cartItem => cartItem.quantity !== 0
+  );
 }

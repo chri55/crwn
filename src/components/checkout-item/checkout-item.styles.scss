@@ -32,10 +32,12 @@
       display:inline;
       margin: 0 10px;
       user-select: none;
+      cursor: pointer;
     }
 
     .remove-button {
       user-select: none;
+      cursor: pointer;
     }
   }
 }
