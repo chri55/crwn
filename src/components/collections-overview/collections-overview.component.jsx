@@ -19,8 +19,8 @@ const CollectionsOverview = ({ collections }) => {
   )
 };
 
-const mapStateToProps = (state) => createStructuredSelector({
-  collections: selectCollectionsAsArray(state),
+const mapStateToProps = createStructuredSelector({
+  collections: selectCollectionsAsArray,
 });
 
 export default connect(mapStateToProps)(CollectionsOverview);

@@ -6,11 +6,11 @@ import { selectCollection }  from '../../redux/shop/shop.selectors';
 
 import './category.styles.scss';
 
-const CategoryPage = ({ match, category }) => {
+const CategoryPage = ({ category }) => {
   console.log(category);
   return (
     <div className="category">
-      <h2>{`${category.title}`}</h2>
+      <h2 className='title'>{`${category.title}`}</h2>
       <div className="items-container">
         {
           category.items.map(item => (
